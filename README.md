@@ -17,7 +17,7 @@
 
 
 
-# 🖥[운영체제](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C.md)
+# 🖥운영체제
 
 - 시스템 소프트웨어
 - 운영체제
@@ -49,9 +49,31 @@
 
 
 
-# 🏛[데이터베이스](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)
+# 🏛데이터베이스
 
-
+- 데이터베이스
+- 관계형 데이터베이스
+- DBMS
+- 스키마
+- 메타데이터
+- 무결성
+- 키의 종류
+- SQL(Structured Query Language)
+- 뷰(View)
+- 트랜잭션(Transaction)
+- COMMIT과 ROLLBACK
+- 트랜잭션 병행 제어
+- 트랜잭션 격리 수준(Transaction Isolation Level)
+- 트랜잭션 회복 기법
+- 정규화
+- Join
+- Index
+- 빠른 쿼리를 위해 알아둬야할 것들
+- DB Optimizer
+- 데이터베이스 풀
+- 스레드 풀
+- Persistence framework
+- NoSQL
 
 
 
@@ -63,7 +85,7 @@
 
 
 
-# 🌍[네트워크](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.md)
+# 🌍네트워크
 
 
 
@@ -75,7 +97,7 @@
 
 
 
-# 🧩[자료구조](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
+# 🧩자료구조
 
 
 
@@ -85,7 +107,7 @@
 
 
 
-# ⚙[디자인 패턴](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4.md)
+# ⚙디자인 패턴
 
 
 
@@ -95,7 +117,7 @@
 
 
 
-# [Java](https://github.com/rxjw95/Knowledge/blob/master/Language/Java.md)
+# Java
 
 
 
@@ -105,7 +127,7 @@
 
 
 
-# [Kotlin](https://github.com/rxjw95/Knowledge/blob/master/Language/Kotlin.md)
+# Kotlin
 
 
 
@@ -115,7 +137,7 @@
 
 
 
-# [Android](https://github.com/rxjw95/Knowledge/blob/master/Dev/Andorid.md)
+# Android
 
 
 
@@ -125,7 +147,7 @@
 
 
 
-# [Spring](https://github.com/rxjw95/Knowledge/blob/master/Dev/Spring.md)
+# Spring
 
 
 
@@ -133,5 +155,5 @@
 
 ---
 
-# [Git](https://github.com/rxjw95/Knowledge/blob/master/git%20%EC%A0%95%EB%A6%AC.md)
+# Git
 
