@@ -77,10 +77,6 @@
 
 
 
-
-
-
-
 ---
 
 
@@ -118,6 +114,28 @@
 
 
 # Java
+
+- JAVA feature
+- 절차 지향과 객체 지향
+- 객체 지향 프로그래밍 특징
+- 5 Principle of Object-Oriented Programming
+- JVM 역할
+- JAVA 메모리 구조
+- 클래스와 객체
+- JAVA 접근 제어자
+- static
+- final
+- Generic, Collection
+- Primitive type, Reference type
+- Wrapper Class
+- String, StringBuilder, StringBuffer
+- Interface, Abstract class
+- Java Thread
+- Java Thread의 Synchroized
+- Serializable과 Parcelable
+- JDK, JRE
+- Reflection
+- 자바에서 클래스 다중 상속 불가능한 이유
 
 
 
