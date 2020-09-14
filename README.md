@@ -83,7 +83,22 @@
 
 # 🌍네트워크
 
-
+- OSI 7계층
+- TCP와 UDP
+- 3-way handshaking
+- 4-way handshaking
+- 로드밸런싱
+- ARP와 RARP
+- HTTP 프로토콜
+- GET 메서드와 POST 메서드
+- SSL
+- 쿠키와 세션
+- REST와 RESTful의 개념
+- 흐름 제어
+- 오류 제어
+- 혼잡 제어
+- 서브넷 마스크
+- HTTP 상태 코드
 
 
 
