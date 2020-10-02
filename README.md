@@ -120,6 +120,16 @@
 
 # ⚙디자인 패턴
 
+- MVC, MVP, MVVM
+- Singeton Pattern
+- State Pattern
+- Command Pattern
+- Observer Pattern
+- Decorator Pattern
+- Template Method Pattern
+- Factory Method Pattern
+- Abstract Factory Pattern
+
 
 
 
@@ -143,6 +153,7 @@
 - Generic, Collection
 - Primitive type, Reference type
 - Wrapper Class
+- JAVA Exception
 - String, StringBuilder, StringBuffer
 - Interface, Abstract class
 - Java Thread

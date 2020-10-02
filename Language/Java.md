@@ -13,6 +13,7 @@
 - [Generic, Collection](#Generic,-Collection)
 - [Primitive type, Reference type](#Primitive-type,-Reference-type)
 - [Wrapper Class](#Wrapper-Class)
+- [JAVA Exception](#JAVA-Exception)
 - [String, StringBuilder, StringBuffer](#String,-StringBuilder,-StringBuffer)
 - [Interface, Abstract class](#Interface,-Abstract-class)
 - [Java Thread](#Java-Thread)
@@ -180,20 +181,6 @@ cal.min(1, 2);   // (o)
 
 
 
-## ☝String, StringBuilder, StringBuffer
-
-String 객체는 immutable. 즉, 한번 생성이 되면 변경이 불가능하다.
-
-예를 들면 String 2개를 연결하는 작업을 할 때에 새로운 String을 객체를 이용하여 문자열을 참조하게 됩니다.
-
-StringBuilder와 StringBuffer의 차이점은 멀티쓰레드 상태에서 동기화의 지원 여부가 다르다.
-
-StringBuffer은 멀티쓰레드 환경에서 동기화를 보장하지만 StringBuilder은 동기화를 보장하지 않는다.
-
-- JDK 1.5버전 이하에서는 String을 사용할때 StringBuilder와 성능 차이가 있었지만 1.5버전 이후부터는 String을 컴파일 할때 자동적으로 StringBuilder로 컴파일 하여 실행되므로 성능 차이가 사라졌다고 한다.
-
-
-
 ## ☝Generic, Collection
 
 - Generic
@@ -217,13 +204,11 @@ StringBuffer은 멀티쓰레드 환경에서 동기화를 보장하지만 String
    
    - Vector : ArrayList와 동일한 구조, 동기화 제공
    
-     
 2. **Set** (저장 순서 유지되지 않음, 데이터 중복 미허용, Indexing 없음
    - HashSet : 순서가 필요없는 데이터를 hashtable에 저장. 가장 성능이 좋음
    
    - HashTree : 저장된 데이터의 값에 따라 정렬. 정렬 시간으로 인해 성능이 비교적 떨어짐
    
-     
 3. **Map** (<key,value> 쌍을 저장, key 중복 x, value 중복 o)
    - HashMap : 일반적인 Map,  value에 null 저장 가능, 동기화 미지원
    - HashTable : HashMap과 동일하지만 동기화를 지원
@@ -248,6 +233,96 @@ StringBuffer은 멀티쓰레드 환경에서 동기화를 보장하지만 String
 근본적인 이유는 기본 데이터 타입을 객체로 변환시켜 전달하기 위해 사용
 
 > 기본 데이터 타입은 객체가 아니어서 Object로 받는 다형성을 지원되지 않는다. Generic과 같이 객체 형태의 타입을 전달해야 할 때나 데이터 타입 변경 등을 사용하는 경우가 있다. 이 때 Wrapper class를 사용한다.
+
+
+
+## ☝JAVA Exception
+
+- **Error와 Exception의 차이**
+
+  - Error : H/W 오동작 or 고장으로 인해 응용프로그램에 이상이 생기거나 JVM 실행에 문제가 생겼을 경우 발생하는 것을 의미 - 이 경우 개발자는 대처할 방법이 극히 제한적
+  - Exception :  사용자의 잘못된 조작 or 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류를 의미 - 이 경우 `예외 처리(Exception Handling )`을 통해 프로그램을 정상적으로 작동시킬 수 있다.
+
+- **try-catch-finally**
+
+  - Exception의 종류
+
+    - | 예외                          | 원인                                                         |
+      | ----------------------------- | ------------------------------------------------------------ |
+      | ArithmeticException           | 정수를 0으로 나눌경우 발생                                   |
+      | ArrayIndexOutOfBoundsExcetion | 배열의 범위를 벗어난 index를 접근할 시 발생                  |
+      | ClassCastExcetion             | 변환할 수 없는 타입으로 객체를 반환 시 발생                  |
+      | NullPointException            | 존재하지 않는 레퍼런스를 참조할때 발생                       |
+      | IllegalArgumentException      | 잘못된 인자를 전달 할 때 발생                                |
+      | IOException                   | 입출력 동작 실패 또는 인터럽트 시 발생                       |
+      | OutOfMemoryException          | 메모리가 부족한 경우 발생                                    |
+      | NumberFormatException         | 문자열이 나타내는 숫자와 일치하지 않는 타입의 숫자로 변환시 발생 |
+
+  - ```java
+    try{
+        //에러가 발생할 수 있는 코드
+        throw new Exception(); //강제 에러 출력 
+    }catch (Exception e){
+        //에러시 수행
+         e.printStackTrace(); //오류 출력(방법은 여러가지)
+         throw e; //최상위 클래스가 아니라면 무조건 던져줘야 Main에서 예외를 인지시킬 수 있음
+    }finally{
+        //무조건 수행, 생략 가능
+    } 
+    ```
+
+- **throw와 throws의 차이**
+
+  - throw : `억지로 에러를 발생시키고자 할 때 사용되기도 하고 현재 메소드의 에러를 처리한 후에 상위 메소드에 에러 정보를 줌으로써 상위 메서드에서도 에러가 발생한 것을 감지할 수 있다.`
+    즉, throw는 개발자가 exception을 강제로 발생시켜 메서드 내에서 예외처리를 수행하는 것이다.
+
+  - throws : `현재 메서드에서 자신을 호출한 상위 메서드로 Exception을 발생 시킨다.`
+    즉, throws 키워드는 사용하는 메서드를 호출한 상위 메서드에서 이러한 에러 처리에 대한 책임을 맡게 되는 것이다.
+
+    > 예외를 전가시키는 것( 예외를 자신이 처리하지 않고, 자신을 호출하는 메소드에게 책임을 전가하는 것)
+
+  - 예시
+
+    - ```java
+      public class Main{
+          public static void main(String[] args){
+              try{
+                  onPower(false); //1번.
+              }
+              catch (CheckOnException e){ //5번 전달받은 예외 처리
+                  System.out.print("전원을 키기를 실패했습니다.");
+              }
+          }
+      
+          //4번. throws 키워드를 통해 3번에서 전달한 exception 정보를 main으로 전달
+          public static void onPower(boolean push) throws CheckOnException{
+              try{
+                  if(push)    System.out.print("전원 On");
+                  else throw new CheckOnException(); //2번. 예외 발생 catch 이동
+              }
+              catch(CheckOnException e){
+                  System.out.print("전원 On 실패, CheckOnException이 onPower()에서 발생");
+                  throw e; //3번. main에 error를 전달
+              }
+          }
+      }
+      ```
+
+    
+
+
+
+## ☝String, StringBuilder, StringBuffer
+
+String 객체는 immutable. 즉, 한번 생성이 되면 변경이 불가능하다.
+
+예를 들면 String 2개를 연결하는 작업을 할 때에 새로운 String을 객체를 이용하여 문자열을 참조하게 됩니다.
+
+StringBuilder와 StringBuffer의 차이점은 멀티쓰레드 상태에서 동기화의 지원 여부가 다르다.
+
+StringBuffer은 멀티쓰레드 환경에서 동기화를 보장하지만 StringBuilder은 동기화를 보장하지 않는다.
+
+- JDK 1.5버전 이하에서는 String을 사용할때 StringBuilder와 성능 차이가 있었지만 1.5버전 이후부터는 String을 컴파일 할때 자동적으로 StringBuilder로 컴파일 하여 실행되므로 성능 차이가 사라졌다고 한다.
 
 
 
