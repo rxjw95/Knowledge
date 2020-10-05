@@ -5,6 +5,8 @@
 - [데이터베이스](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)
 - [네트워크](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.md)
 - [디자인 패턴](https://github.com/rxjw95/Knowledge/blob/master/Computer_Science/%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8C%A8%ED%84%B4.md)
+- [자료구조]()
+- [알고리즘]()
 - [Java](https://github.com/rxjw95/Knowledge/blob/master/Language/Java.md)
 - [Kotlin](https://github.com/rxjw95/Knowledge/blob/master/Language/Kotlin.md)
 - [Andorid](https://github.com/rxjw95/Knowledge/blob/master/Dev/Andorid.md)
@@ -111,6 +113,20 @@
 # 🧩자료구조
 
 
+
+
+
+# 🎉알고리즘
+
+- DFS/BFS
+- Sort - 카운팅 소트
+- Sort - 합병 정렬
+- Sort - 퀵 정렬
+- Sort - 힙 정렬
+- Sort - 삽입 정렬
+- Sort - 선택 정렬
+- Sort - 버블 정렬
+- 이분 탐색
 
 
 
