@@ -39,12 +39,20 @@ github의 상태 그대로 clone 했고 수정해서 push 하는데, 왜 에러�
 
 ---
 
-###  ! [rejected]        master -> master (fetch first)
+### git push 시 발생
+
+! [rejected]        master -> master (fetch first)
+
 error: failed to push some refs to 'https://github.com/rxjw95/Knowledge.git'
+
 hint: Updates were rejected because the remote contains work that you do
+
 hint: not have locally. This is usually caused by another repository pushing
+
 hint: to the same ref. You may want to first integrate the remote changes
+
 hint: (e.g., 'git pull ...') before pushing again.
+
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 
@@ -75,6 +83,57 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 
 참고 : https://mrvirk.com/enter-a-commit-message-to-explain-why-this-merge-is-necessary.html
+
+---
+
+### git pull 시 발생
+There is no tracking information for the current branch.
+
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+
+- 상황
+  - Algorithm repo pull 수행시 발생한 설명
+
+
+
+회사 노트북으로 알고리즘 풀어서 push 해놨던 걸 내 개인 노트북으로 `git pull` 수행했더니 저 메세지가 출력됬다.
+
+
+
+메세지는 현재 branch에 대한 추적 정보가 없다. 병합할 branch를 지정해라 같다.
+
+> 이게 무슨 소리야?
+
+로컬에 branch가 생성되었으니 그걸 리모트 branch를 추적하게 해야 한다고 한다.
+
+
+
+그래서 메시지 아래에 2개의 방법이 주어지는 것 같다.
+
+    git pull <remote> <branch>
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+
+- 해결
+  - `git branch --set-upstream-to=origin/master master`의 `--set-upstream-to` 옵션 줘서 로컬 master가 origin/master를 추적하게끔 해준다.
+  - 그 후 `git pull`
+
+
+
+> 항상 내 노트북에서만 git으로 push, pull 하다보니 해당 에러에 익숙하지 못한거 같다.
+>
+> 기본기가 중요하다는 것을 다시 한 번 깨우친다.
 
 ---
 
