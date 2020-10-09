@@ -14,7 +14,7 @@
 
 ## Error
 
-##  failed to push some refs to '...'
+### failed to push some refs to '...'
 
 - 상황 
   - git clone 명령어를 사용해서 github에 repo를 받아왔음 (구성 - readme.md)
@@ -37,5 +37,44 @@ github의 상태 그대로 clone 했고 수정해서 push 하는데, 왜 에러�
 
 
 
+---
 
+###  ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/rxjw95/Knowledge.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+- 상황
+  - git error 해결법 작성 후 knowledge repo push 수행 시 오류 발생
+
+
+
+일단 회사 노트북에서도 github을 관리하고 내 개인 노트북에서도 github을 관리하기 때문에 상태가 달라서 생긴 문제다.
+
+그래서 `git pull`을 먹이니 화면이 변경되면서 merge 하는 이유를 작성하라는데, 타이핑이 하나도 안먹혀서 왜 이러나 싶었다. (처음 있는 일이라서 ㅎㅎ)
+
+
+
+- 해결
+
+  1. Press “i” on your keyboard.
+
+  2. Write your merge message
+
+  3. Press “esc” button
+
+  4. Type “:wq”
+  5. Press Enter
+  6. Finally, Push Changes “git push”
+
+
+
+참고 : https://mrvirk.com/enter-a-commit-message-to-explain-why-this-merge-is-necessary.html
+
+---
 
